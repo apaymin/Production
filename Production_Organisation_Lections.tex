@@ -1,0 +1,84 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath,amsfonts,amsthm,amssymb,amsbsy,amstext,amscd,amsxtra,multicol,mathtools}
+\usepackage{mathtext}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{float}
+\usepackage{color}
+% \usepackage{xspace}
+% \usepackage[document]{ragged2e}
+% \usepackage{multirow}
+\usepackage{indentfirst}
+% \usepackage{verbatim}
+\usepackage{tikz}
+% \usepackage{forest}
+
+% Объединение ячеек
+\usepackage{adjustbox}
+\usepackage{multirow}
+
+% Значок градуса
+\usepackage{gensymb}
+
+% Выделенное поле для примечаний
+\usepackage[most]{tcolorbox}
+\definecolor{block-gray}{gray}{0.90} % уровень прозрачности (1 - максимум)
+\newtcolorbox{myquote}{colback=block-gray, grow to right by=0mm, grow to left by=0mm,
+boxrule=0pt,boxsep=0pt,breakable} % настройки области с изменённым фоном
+
+\setlength{\parindent}{0.8cm}
+\setlength{\parskip}{0cm}
+
+\def\eps{\varepsilon}
+\usepackage[left =2cm, right=2cm, top=2cm, bottom=2cm, bindingoffset=0cm]{geometry}
+
+% Настройка секций (внутрення нумерация, номер не отображается)
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\makeatletter
+\def\@seccntformat#1{\csname #1ignore\expandafter\endcsname\csname the#1\endcsname\quad}
+\let\sectionignore\@gobbletwo
+\let\latex@numberline\numberline
+\def\numberline#1{\if\relax#1\relax\else\latex@numberline{#1}\fi}
+\makeatother
+
+% Нумерация уравнений
+\numberwithin{equation}{subsection}
+
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{%
+  colorlinks = true,
+  linkcolor  = black
+}
+
+
+
+
+
+\begin{document}
+
+\title{Организация и планирование производства.}
+\author{Паймин Антон, СМ5-111}
+
+\makeatletter
+\begin{center}
+    {\fontsize{14pt}{24pt}\selectfont\bfseries\@title\par}
+    {\fontsize{14pt}{16pt}\@author\par}
+\end{center}
+\makeatother
+
+\tableofcontents
+
+\section{Лекции}
+
+\section{Семинары}
+
+
+
+\end{document}
